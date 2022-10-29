@@ -1,14 +1,12 @@
 package com.omergunes.todolist.controller;
 
-import com.omergunes.todolist.model.Friday;
-import com.omergunes.todolist.model.Monday;
-import com.omergunes.todolist.repo.FridayRepo;
-import com.omergunes.todolist.repo.MondayRepo;
+
+import com.omergunes.todolist.requestDto.SaveFridayRequestDto;
+import com.omergunes.todolist.response.FridayResponseDto;
 import com.omergunes.todolist.services.FridayService;
-import com.omergunes.todolist.services.MondayService;
-import com.sun.istack.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.annotation.Validated;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,20 +16,28 @@ import java.util.List;
 public class FridayController {
 
     @Autowired
-    public FridayRepo fridayRepo;
     FridayService fridayService;
 
-    @GetMapping("/getList")
-    public List<Friday> findAll(){
-        return fridayRepo.findAll();
+    public FridayController(FridayService fridayService) {
+        this.fridayService=fridayService;
     }
+
+    @GetMapping("/getList")
+    public ResponseEntity<List<FridayResponseDto>> findAll(@RequestParam String description){
+        List<FridayResponseDto> fridayResponseDtos = fridayService.findAll(description);
+        return new ResponseEntity<>(fridayResponseDtos, HttpStatus.OK);
+        }
+
     @PostMapping("/add")
-    public Friday add(@Validated @NotNull @RequestBody Friday friday){
-        return fridayRepo.save(friday);
+    public ResponseEntity<List<SaveFridayRequestDto>> add(@RequestBody SaveFridayRequestDto saveFridayRequestDto){
+        fridayService.add(saveFridayRequestDto);
+        return new ResponseEntity<>(HttpStatus.OK);
+
     }
     @DeleteMapping("/delete/{id}")
-    public List<Friday> fridayList(@PathVariable("id") Long id){
-        fridayRepo.deleteById(id);
-        return null;
+    public ResponseEntity<List<SaveFridayRequestDto>> delete(@PathVariable long id) {
+        fridayService.delete(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+
     }
 }
