@@ -4,7 +4,7 @@ POSTMAN API - DATABASE SİSTEMİNE KAYDETME
 ![görsel1](https://user-images.githubusercontent.com/73720725/198850266-bcbd4efd-d281-4e46-be78-3b4bf850195a.png)
 
 
-H2'DE GÖNDERDİĞİMİZ API'NIN TABLODAKİ DURUMU
+H2 ÜZERİNDEN TABLOMUZUN GÖRÜNÜMÜ
 ![görsel2](https://user-images.githubusercontent.com/73720725/198850294-bd945731-5254-4491-963d-e70ccdf3e221.png)
 
 
