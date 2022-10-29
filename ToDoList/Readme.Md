@@ -16,12 +16,12 @@ SON DURUMUMUZUN H2'DE GÖRÜNÜMÜ
 ![görsel4](https://user-images.githubusercontent.com/73720725/198850320-15e904ae-ebaa-4c25-bcda-9728819f46d9.png)
 
 
-Tablomuza yapılacak yeni bir durum ekledikten sonra H2 Database'mize gidiyoruz.
+Tablomuza yapılacak yeni bir durum ekledikten sonra H2 Database'mizdeki durumu görüntülüyoruz
 
 ![görsel5](https://user-images.githubusercontent.com/73720725/198850650-aa26bc6a-de5e-45fb-a11e-6e639180dea7.png)
 
 
-POSTMAN ÜZERİNDEN YAPILACAK BİR DURUMUMUZU SİLMEK İÇİN DELETE İLE API'YE İSTEK GÖNDERİYORUZ VE TRUE SONUCUNU ALIYORUZ
+DAHA SONRA POSTMAN ÜZERİNDEN YAPILACAK BİR DURUMUMUZU SİLMEK İÇİN DELETE İLE API'YE İSTEK GÖNDERİYORUZ VE TRUE SONUCUNU ALIYORUZ
 
 ![görsel6](https://user-images.githubusercontent.com/73720725/198850579-e52a09be-1f72-4fc9-bcc7-bcdfb9532e2d.png)
 
